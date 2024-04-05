@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+body{
+  width: 1280px;
+  margin: auto;
+  background-image: url(./images/bac2.jpg);
+}
+#sl img {
+  width: 1280px;
+  height: 500px;
+}
+.na_po{
+  display: flex;
+  margin-top: 40px;
+}
+.na_po li {
+  list-style: none;
+  margin-left: 30px;
+}
+#nav img{
+  width: 250px;
+  height: 100px;
+}
+#nav h2{
+  float: left;
+}
+#nav ul{
+  float: right;
+}
+#nav a{
+  text-decoration: none;
+  color: white;
+}
+#main{
+  clear: both;
+}
+#main_images img{
+  width: 200px;
+}
+#sub_img img{
+  width: 630px;
+  display: inline-block;
+}
+
+/*--キャッチコピー--*/
+#catch h1{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 300%;
+}
+#catch p{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+/*--ニュース--*/
+#news{
+  background-color: rgb(189, 235, 189);
+  padding-bottom: 80px;
+  margin-bottom: 150px;
+}
+#news h2{
+  text-align: center;
+  color: gray;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+#news_s{
+  background-color: white;
+  width: 1080px;
+  margin: auto;
+  padding: 30px;
+}
+#news_s p{
+  color: gray;
+}
+#news_s span{
+  color: rgb(0, 102, 255);
+}
+
+/*--カレンダー--*/
+.calendar-container{
+  display: inline-flex;
+  justify-content: space-around;
+}
+#day{
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+#day h2{
+  text-align: center;
+}
+#day h1{
+  margin-left: 60px;
+  margin-right: 20px;
+}
+#day p{
+  text-align: center;
+}
+#kyuuenn,.kyu{
+  color: red;
+}
+
+/*--テーブル--*/
+#main_info table{
+  border-collapse: collapse;
+}
+#main_info th,#main_info td{
+  border: 2px solid;
+  background-color: burlywood;
+}
+#main_info th{
+  width: 40px;
+}
+
+
+#main_info p{
+  margin-bottom: 150px;
+}
+
+/*--お問い合わせ--*/
+#main_inquiry input{
+  width: 300px;
+  height: 20px;
+}
+#main_inquiry textarea{
+  width: 450px;
+  height: 150px;
+}
+#main_inquiry button{
+  background-color: rgb(209, 116, 82);
+  width: 100px;
+  font-size: 120%;
+  color: white;
+}
+
+/*--紹介--*/
+#main_syokai img{
+  width: 300px;
+  height: 150px;
+}
+/*遊び方*/
+
+#taitle{
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+#park_h{
+  width: 500px;
+}
+#cart{
+  width: 500px;
+}
+#kujaku{
+  width: 400px;
+  margin-left: 900px;
+}
+
+#asobi_p{
+
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+}
+#sanpo{
+  width: 600px;
+}
+#gaido{
+  width: 600px;
+}
+#map_s{
+  display: flex;
+}
+#map_p{
+  text-align: center;
+  background-color: rgb(254, 255, 193);
+  font-weight: normal;
+}
+#gaidepdf{
+  margin-left: 245px;
+}
+#mappdf{
+  margin-left: 40px;
+}
+
+/*--フッター--*/
+footer{
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width:1080px){
+  body{
+    width: auto;
+  }
+  #sl img {
+    width: 100%;
+    height: 90%;
+  }
+  #news_s{
+    width: 85%;
+  }
+  .calendar-container{
+    display: inline-block;
+    justify-content:unset;
+  }
+  .calendar{
+    margin-left: 60px;
+  }
+  #day h1{
+    text-align: center;
+  }
+  #sub_img img{
+    display: block;
+    width: 90%;
+    margin-left: 30px;
+    padding-bottom: 150px;
+  }
+  /*メニュー部分*/
+#nav {
+  background-color: #fff; /*メニュー背景色*/
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px 40px; /*メニュー内部上下左右余白*/
+  position: fixed;
+  right: -300px; /*メニュー横幅①と合わせる*/
+  top: 0;
+  transition: transform 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+  width: 300px; /*メニュー横幅①*/
+  z-index: 1000;
+}
+#nav ul li{
+list-style-type:none;
+margin-bottom: 10px;
+font-size: 20px;
+}
+
+/*メニューアイコン部分は疑似要素で*/
+#nav:before {
+  background-color: #fff; /*ボタン部分背景色*/
+  border-radius: 0 0 0 10px; /*左下角丸*/
+  color: #333; /*アイコン（フォント）色*/
+  content: "≡"; /*メニューアイコン*/
+  display: block;
+  font-size: 80px; /*アイコン（フォント）サイズ*/
+  height: 50px;
+  line-height: 50px; /*縦位置中央化*/
+  position: absolute;
+  right: 100%;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+/*透過背景部分*/
+#menu-background {
+  background-color: #333; /*黒背景部分背景色*/
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.3s linear 0s; /*0.3s は変化するのにかかる時間*/
+  width: 100%;
+  z-index: -1;/*レイヤを表し、z-index: 10; の要素より、 z-index:20; の要素のほうが上*/
+}
+
+/*hover 時の処理*/
+#nav:hover {
+  transform: translate(-300px); /*メニュー横幅①と合わせる*/
+}
+#nav:hover ~ #menu-background { /*#nav:hoverの直後に隣接している要素にCSSを設定する*/
+  opacity: 0.5; /*黒背景部分透過度*/
+  z-index: 999; 
+}
+#nav a{
+  text-decoration: none;
+  color: black;
+}
+#main_info iframe{
+  width: 100%;
+}
+.na_po{
+  display: block;
+}
+}
+
